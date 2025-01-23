@@ -1,0 +1,17 @@
+{
+  "name": "webanimate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev":"vite",
+    "build":"vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.0.11"
+  }
+}
