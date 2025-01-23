@@ -9,7 +9,7 @@ export default defineConfig({
   },
   server: {
     port: 3030, // 设置开发服务器的端口号
-    open: true, // 自动打开浏览器
+    open: !true, // 自动打开浏览器
   },
   build: {
     outDir: 'dist', // 构建输出目录
