@@ -1,16 +1,36 @@
-.one .icon svg {
+.bg-white {
+    width: 100%;
+}
+
+.one,
+.two,
+.three {
+    display: none;
+}
+
+.tle .icon svg {
     &:not(&:first-child) {
-        margin-left: 2vh;
+        margin-left: 10px;
     }
 }
 
-.one .icon {
+.tle p {
+    text-indent: 2vh;
+    padding: 4vh;
+    margin-left: 20%;
+    text-align: left;
+    width: 20%;
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.tle .icon {
     display: inline-block;
     margin-top: 2vh;
     scale: 1.5;
 }
 
-.one .tle span {
+.tle span {
     display: block;
     font-size: 6vh;
     font-weight: bold;
@@ -22,31 +42,26 @@
     }
 }
 
-.one .tle {
-    margin-top: 15%;
+.one>.tle {
+    padding-top: 10%;
     text-align: center;
     /* text-emphasis: filled double-circle #ffb703; */
+    background-color: rgb(240, 220, 78);
 }
 
-.one .bar span {
+
+
+.bar span {
     margin-left: 5vh;
     user-select: none;
     cursor: pointer;
 }
 
-.one .bar {
+.bar {
     font-family: 'eyfst';
-    text-align: center;
-    font-size: 16pt;
-    max-height: 4%;
-}
-
-.one {
-    box-sizing: border-box;
-    width: 100vw;
-    height: 60vh;
-    padding-top: 2vh;
-    background-color: rgb(240, 220, 78);
+    padding-block: 1vh;
+    background-color: #2e302c;
+    color: white;
 }
 
 * {
@@ -54,10 +69,25 @@
     padding: 0;
 }
 
+a {
+    color: auto;
+    text-decoration: none;
+}
+
 body {
     color: #2e302c;
     overflow-x: hidden;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        appearance: none;
+        width: 2px;
+        background-color: rgb(240, 220, 78);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #2e302c;
+    }
 }
 
 @font-face {
