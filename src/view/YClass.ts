@@ -24,7 +24,7 @@ export class Bar {
         this.init(tab_arr);
     }
     init(tab_arr: TabType[]) {
-        const idx = 1;
+        const idx = 2;
         this.setDefineActive(idx, tab_arr[idx].color);
         tab_arr.forEach(item => {
             const bar = this.getElement(item.id_tab);
