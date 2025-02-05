@@ -12,24 +12,27 @@ interface TabType {
 }
 
 export class Bar {
-    arr_tab: (HTMLElement | null)[] = [];
-    arr_body: (HTMLElement | null)[] = [];
-    constructor(tab_id: TabType[]) {
-        this.arr_tab = this.getElements(tab_id.map(item => item.id_tab));
-        this.arr_body = this.getElements(tab_id.map(item => item.id_body));
-        this.init(tab_id);
+    arr_tab: (HTMLElement)[] = [];
+    arr_body: (HTMLElement)[] = [];
+    constructor(tab_arr: TabType[]) {
+        const arr_tab = this.getElements(tab_arr.map(item => item.id_tab));
+        const arr_body = this.getElements(tab_arr.map(item => item.id_body));
+        if (arr_tab.concat(arr_body).every(item => item != null)) {
+            this.arr_tab = this.getElements(tab_arr.map(item => item.id_tab)) as HTMLElement[];
+            this.arr_body = this.getElements(tab_arr.map(item => item.id_body)) as HTMLElement[];
+        }
+        this.init(tab_arr);
     }
-    init(tab_id: TabType[]) {
-        this.arr_tab[0]!.style.color = tab_id[0].color;
-        this.arr_body[0]!.style.display = 'block';
-
-        tab_id.forEach(item => {
+    init(tab_arr: TabType[]) {
+        const idx = 1;
+        this.setDefineActive(idx, tab_arr[idx].color);
+        tab_arr.forEach(item => {
             const bar = this.getElement(item.id_tab);
             if (bar != null) {
-                bar.addEventListener('click', () => {
+                this.addClick(bar, () => {
                     console.log(bar);
                     this.setSelect(item);
-                })
+                });
             }
         });
     }
@@ -43,22 +46,29 @@ export class Bar {
                         if (body && body.id == item.id_body) {
                             body.style.display = 'block';
                         } else {
-                            body!.style.display = 'none';
+                            body.style.display = 'none';
                         }
                     });
                 } else {
-                    bar!.style.color = "";
+                    bar.style.color = "";
                 }
             }
         });
     }
-    getElement(id: string) {
+    setDefineActive(idx: number = 0, color: string) {
+        this.arr_tab[idx].style.color = color;
+        this.arr_body[idx].style.display = 'block';
+    }
+    private getElement(id: string) {
         return document.getElementById(id);
     }
-    getElements(id_arr: string[]) {
+    private getElements(id_arr: string[]) {
         return id_arr.map(id => document.getElementById(id));
     }
-    addClick(dom: HTMLElement, callfun: () => void) {
+    private addClick(dom: HTMLElement, callfun: () => void) {
         dom.addEventListener('click', callfun.bind(this));
+    }
+    get_arr_body() {
+
     }
 }

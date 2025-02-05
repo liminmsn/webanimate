@@ -42,10 +42,15 @@
     }
 }
 
+.two {
+    height: calc(100vh - 4vh);
+    background-color: red;
+    color: white;
+}
+
 .one>.tle {
     padding-top: 10%;
     text-align: center;
-    /* text-emphasis: filled double-circle #ffb703; */
     background-color: rgb(240, 220, 78);
 }
 
@@ -59,7 +64,8 @@
 
 .bar {
     font-family: 'eyfst';
-    padding-block: 1vh;
+    height: 4vh;
+    line-height: 2.5;
     background-color: #2e302c;
     color: white;
 }
