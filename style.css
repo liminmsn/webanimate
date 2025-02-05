@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-
+/* ---three */
 .info p span {
     margin-left: 1vh;
     font-weight: bold;
@@ -25,17 +25,31 @@
     transform: scale(1);
     display: inline-block;
     padding: 2vh;
-    border-radius: 3vh;
+    border-radius: 2vh;
     background-color: white;
     box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.24);
     user-select: none;
 }
 
+/* three--- */
+
+
+/* ---two */
+.two .card {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    right: 2vh;
+    border-radius: 2vh;
+    background-color: white;
+    box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.24);
+}
+
+/* two--- */
 
 
 
-
-
+/* ---one */
 .tle .icon svg {
     &:not(&:first-child) {
         margin-left: 10px;
@@ -70,8 +84,12 @@
     }
 }
 
+/* one--- */
 
 
+
+
+/* -----all */
 .three {
     box-sizing: border-box;
     text-align: center;
@@ -149,6 +167,8 @@
     }
 }
 
+/* all----- */
+
 .bar {
     font-family: 'eyfst';
     box-sizing: border-box;
@@ -189,13 +209,9 @@ body {
 }
 
 @keyframes size_r {
-    0%{
-        
-    }
-    50%{
-        
-    }
-    100%{
-        
-    }
+    0% {}
+
+    50% {}
+
+    100% {}
 }
