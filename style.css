@@ -1,0 +1,66 @@
+.one .icon svg {
+    &:not(&:first-child) {
+        margin-left: 2vh;
+    }
+}
+
+.one .icon {
+    display: inline-block;
+    margin-top: 2vh;
+    scale: 1.5;
+}
+
+.one .tle span {
+    display: block;
+    font-size: 6vh;
+    font-weight: bold;
+
+    &:nth-child(2) {
+        font-size: 4vh;
+        margin-block: 10pt;
+        margin-bottom: 5pt;
+    }
+}
+
+.one .tle {
+    margin-top: 15%;
+    text-align: center;
+    /* text-emphasis: filled double-circle #ffb703; */
+}
+
+.one .bar span {
+    margin-left: 5vh;
+    user-select: none;
+    cursor: pointer;
+}
+
+.one .bar {
+    font-family: 'eyfst';
+    text-align: center;
+    font-size: 16pt;
+    max-height: 4%;
+}
+
+.one {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 60vh;
+    padding-top: 2vh;
+    background-color: rgb(240, 220, 78);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #2e302c;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@font-face {
+    font-family: 'eyfst';
+    src: url("./public/font/尔雅风神体.ttf") format("truetype");
+}
