@@ -2,12 +2,6 @@
     width: 100%;
 }
 
-.one,
-.two,
-.three {
-    display: none;
-}
-
 .tle .icon svg {
     &:not(&:first-child) {
         margin-left: 10px;
@@ -16,12 +10,12 @@
 
 .tle p {
     text-indent: 2vh;
-    padding: 4vh;
-    margin-left: 20%;
     text-align: left;
-    width: 20%;
     font-weight: bold;
     font-size: 16pt;
+    width: 20%;
+    margin-left: 25%;
+    margin-top: 10vh;
 }
 
 .tle .icon {
@@ -42,6 +36,8 @@
     }
 }
 
+
+
 .two {
     height: calc(100vh - 4vh);
     background-color: red;
@@ -55,19 +51,28 @@
 }
 
 
+#one,
+#two,
+#three {
+    display: none;
+}
 
 .bar span {
-    margin-left: 5vh;
     user-select: none;
     cursor: pointer;
+    margin-left: 1vh;
+
+    &:not(&:first-child) {
+        margin-left: 2vh;
+    }
 }
 
 .bar {
     font-family: 'eyfst';
-    height: 4vh;
-    line-height: 2.5;
+    box-sizing: border-box;
     background-color: #2e302c;
     color: white;
+    line-height: 4vh;
 }
 
 * {

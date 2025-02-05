@@ -42,6 +42,7 @@ export class Bar {
             if (bar) {
                 if (bar && bar.id == item.id_tab) {
                     bar.style.color = item.color;
+                    bar.style.textDecoration = `underline wavy ${item.color}`;
                     this.arr_body.forEach(body => {
                         if (body && body.id == item.id_body) {
                             body.style.display = 'block';
@@ -51,12 +52,14 @@ export class Bar {
                     });
                 } else {
                     bar.style.color = "";
+                    bar.style.textDecoration = `none`;
                 }
             }
         });
     }
     setDefineActive(idx: number = 0, color: string) {
         this.arr_tab[idx].style.color = color;
+        this.arr_tab[idx].style.textDecoration = `underline wavy ${color}`;
         this.arr_body[idx].style.display = 'block';
     }
     private getElement(id: string) {
